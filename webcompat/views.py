@@ -351,7 +351,6 @@ def show_issue(number):
         flash(number, 'thanks')
         session.pop('show_thanks')
     issue_data = proxy_issue(number)
-    print(json.dumps(issue_data[0]))
     return render_template('issue.html', number=number,
                            issue_data=json.loads(issue_data[0]))
 
